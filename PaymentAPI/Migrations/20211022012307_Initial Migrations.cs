@@ -1,6 +1,8 @@
 ﻿using System;
+using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
+using PaymentAPI.Models;
 
 namespace PaymentAPI.Migrations
 {
@@ -235,6 +237,23 @@ namespace PaymentAPI.Migrations
                 name: "IX_RefreshTokens_UserId",
                 table: "RefreshTokens",
                 column: "UserId");
+            //ADD DATA
+            List<PaymentDetailData> paymentDatas = new List<PaymentDetailData>
+            {
+                new PaymentDetailData { cardOwnerName = "Uncle Roger", cardNumber = "GN003", expirationDate = "03/11/2021", securityCode=  "1234567"},
+                new PaymentDetailData { cardOwnerName = "Uncle James", cardNumber = "GN032", expirationDate = "20/11/2021", securityCode=  "808023"},
+                new PaymentDetailData { cardOwnerName = "Sister Bety", cardNumber = "GN025", expirationDate = "29/11/2021", securityCode=  "707035"},
+                new PaymentDetailData { cardOwnerName = "Mr Jones", cardNumber = "GN013", expirationDate = "10/11/2021", securityCode=  "552255"}
+
+            };
+            foreach (var data in paymentDatas)
+            {
+                migrationBuilder.InsertData(
+                    table: "PaymentDetailItems",
+                    columns: new[] { "cardOwnerName", "cardNumber", "expirationDate", "securityCode" },
+                    values: new object[] { data.cardOwnerName, data.cardNumber, data.expirationDate, data.securityCode }
+                );
+            }
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
