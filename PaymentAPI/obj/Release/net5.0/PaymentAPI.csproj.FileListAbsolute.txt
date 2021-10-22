@@ -59,7 +59,6 @@ C:\Users\ryncl\Desktop\PaymentAPI\PaymentAPI\obj\Release\net5.0\staticwebassets\
 C:\Users\ryncl\Desktop\PaymentAPI\PaymentAPI\obj\Release\net5.0\staticwebassets\PaymentAPI.StaticWebAssets.xml
 C:\Users\ryncl\Desktop\PaymentAPI\PaymentAPI\obj\Release\net5.0\scopedcss\bundle\PaymentAPI.styles.css
 C:\Users\ryncl\Desktop\PaymentAPI\PaymentAPI\obj\Release\net5.0\PaymentAPI.RazorTargetAssemblyInfo.cache
-C:\Users\ryncl\Desktop\PaymentAPI\PaymentAPI\obj\Release\net5.0\PaymentAPI.csproj.CopyComplete
 C:\Users\ryncl\Desktop\PaymentAPI\PaymentAPI\obj\Release\net5.0\PaymentAPI.dll
 C:\Users\ryncl\Desktop\PaymentAPI\PaymentAPI\obj\Release\net5.0\ref\PaymentAPI.dll
 C:\Users\ryncl\Desktop\PaymentAPI\PaymentAPI\obj\Release\net5.0\PaymentAPI.pdb
