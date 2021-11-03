@@ -2519,11 +2519,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ryncl\\Desktop\\PaymentAPI\\PaymentAPI\\PaymentAPI.csproj",
+      "projectUniqueName": "C:\\Users\\ryncl\\Desktop\\PaymentAPI\\PaymentAPI.csproj",
       "projectName": "PaymentAPI",
-      "projectPath": "C:\\Users\\ryncl\\Desktop\\PaymentAPI\\PaymentAPI\\PaymentAPI.csproj",
+      "projectPath": "C:\\Users\\ryncl\\Desktop\\PaymentAPI\\PaymentAPI.csproj",
       "packagesPath": "C:\\Users\\ryncl\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ryncl\\Desktop\\PaymentAPI\\PaymentAPI\\obj\\",
+      "outputPath": "C:\\Users\\ryncl\\Desktop\\PaymentAPI\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\ryncl\\AppData\\Roaming\\NuGet\\NuGet.Config",

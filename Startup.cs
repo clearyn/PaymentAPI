@@ -23,6 +23,7 @@ namespace PaymentAPI
 {
     public class Startup
     {
+        readonly string MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
@@ -103,6 +104,19 @@ namespace PaymentAPI
 
             services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
                    .AddEntityFrameworkStores<ApiDbContext>();
+
+            //CORS
+            services.AddCors(options => //ini + 
+            {
+                options.AddPolicy(
+                  name: MyAllowSpecificOrigins,
+                  builder =>
+                  {
+                      builder.WithOrigins("*").AllowAnyHeader().AllowAnyMethod();
+                  }
+                );
+            }
+);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -115,9 +129,11 @@ namespace PaymentAPI
             app.UseSwagger();
             app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "PaymentAPI v1"));
 
-            app.UseHttpsRedirection();
+            //app.UseHttpsRedirection();
 
             app.UseRouting();
+
+            app.UseCors(MyAllowSpecificOrigins);
 
             //Autentikasi
             app.UseAuthentication();
