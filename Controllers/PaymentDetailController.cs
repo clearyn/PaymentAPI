@@ -12,7 +12,7 @@ namespace PaymentAPI_SqLite.Controllers
 {
     [Route("api/[controller]")] // Define routing
     [ApiController] // We need to specify type controller
-    [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]// Login user only aka JWT Auth
+    // [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]// Login user only aka JWT Auth
     public class PaymentDetail : ControllerBase
     {
         private readonly ApiDbContext _context;
